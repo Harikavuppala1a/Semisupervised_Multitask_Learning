@@ -1,0 +1,18 @@
+**********
+poss_word_feats_emb_dict = {'glove': 300, 'elmo': 3072}
+test_mode = True
+MAX_WORDS_SENT = 35
+RANDOM_STATE = 22
+TEST_RATIO = 0.15
+VALID_RATIO = 0.15
+feat_type = 'elmo'
+filename = 'data.csv'
+save_path = "data/"
+MODEL_TYPE = "all"
+models = ['svm','logistic_regression','random_forest','GBT']
+filepath = "../saved_13k/word_vecs~elmo/False/"
+data_folder_name = "data/"
+MAX_FEATURES = 10000
+n_estimators = 100
+c_linear_SVC = 1.0
+class_weight = "balanced"
