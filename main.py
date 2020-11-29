@@ -149,7 +149,8 @@ for conf_dict in conf_dict_list:
                                                                     mod_op, att_op= train_predict(word_feats,sent_enc_feats, trainY,data_dict, model_type, num_cnn_filters, rnn_type, fname_part, loss_func, cw,nonlin, out_vec_size, rnn_dim, att_dim, max_pool_k_val,stack_rnn_flag,cnn_kernel_set, m_ind, run_ind, conf_dict_com["save_folder_name"], conf_dict_com["use_saved_model"], conf_dict_com["gen_att"], conf_dict_com["LEARN_RATE"], conf_dict_com["dropO1"], conf_dict_com["dropO2"], conf_dict_com["BATCH_SIZE"], conf_dict_com["EPOCHS"], conf_dict_com["save_model"],conf_dict_com["st_variant"],conf_scores_array,conf_dict_com['use_conf_scores'],conf_dict_com['multi_task_tl'],conf_dict_com['share_weights_sep_mt'],conf_dict_com['single_inp_tasks_list'],conf_dict_com['sep_inp_tasks_list'])
                                                                     if conf_dict_com['use_conf_scores']:
                                                                         mod_op_list.append((mod_op[:,:out_vec_size], att_op))
-                                                                    mod_op_list.append((mod_op, att_op))
+                                                                    else:
+                                                                        mod_op_list.append((mod_op, att_op))
                                                                 mod_op_list_save_list.append(mod_op_list) 
                                                             pred_vals, true_vals, metr_dict = evaluate_model(mod_op_list, data_dict, bac_map, prob_trans_type, metr_dict, thresh, conf_dict_com['gen_att'], conf_dict_com["output_folder_name"], ("%s~%d" % (fname_part,run_ind)))
                                                             pred_vals_total.append(pred_vals)
