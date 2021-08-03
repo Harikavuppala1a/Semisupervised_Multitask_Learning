@@ -5,3 +5,11 @@ Abstract: Sexism, a form of oppression based on one's sex, manifests itself in n
 One can run the code using: python main.py data/config_deeplearning.txt. 
 
 If you use this code for any research, please cite our COLING paper.
+
+@inproceedings{abburi2020semi,
+  title={Semi-supervised Multi-task Learning for Multi-label Fine-grained Sexism Classification},
+  author={Abburi, Harika and Parikh, Pulkit and Chhaya, Niyati and Varma, Vasudeva},
+  booktitle={Proceedings of the 28th International Conference on Computational Linguistics},
+  pages={5810--5820},
+  year={2020}
+}
